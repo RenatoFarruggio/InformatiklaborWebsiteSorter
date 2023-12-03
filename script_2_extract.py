@@ -65,7 +65,7 @@ def extract_files_and_process_zips(base_data_path, source_subfolder, destination
         # Extract the zip file
         zip_file_path = os.path.join(folder_path, zip_files[0])
         with ZipFile(zip_file_path, 'r') as zip_ref:
-            extract_to = os.path.join(destination_path, folder)  # This should be 'folder1'
+            extract_to = os.path.join(destination_path, folder)
             os.makedirs(extract_to, exist_ok=True)
             zip_ref.extractall(extract_to)
             
@@ -78,7 +78,7 @@ def extract_files_and_process_zips(base_data_path, source_subfolder, destination
             if not any(file.endswith('.html') for file in os.listdir(extract_to)):
                 if len(os.listdir(extract_to)) == 2:
                     single_name = os.listdir(extract_to)[0]
-                    single_path = os.path.join(extract_to, single_name)  # This should be 'subfolder1'
+                    single_path = os.path.join(extract_to, single_name)
 
                     if os.path.isdir(single_path):
                         for item in os.listdir(single_path):

@@ -51,7 +51,6 @@ def main():
     if os.path.exists(abgaben_folder_path):
         move_files(abgaben_folder_path, extract_to_path)
         shutil.rmtree(uebung_folder_path)
-        print(f"Moved files from '{abgaben_folder_path}' to '{extract_to_path}' and deleted '{uebung_folder_path}'.")
 
 if __name__ == "__main__":
     main()
