@@ -47,10 +47,16 @@ def extract_files_and_process_zips(base_data_path, source_subfolder, destination
     for folder in os.listdir(destination_path):
         folder_path = os.path.join(destination_path, folder)
 
+        # If there is no zip file, but only a html file, then there is nothing to unzip in this folder
+        if len(os.listdir(folder_path)) == 1 and os.listdir(folder_path)[0].endswith(".html"):
+            print(f"Folder {folder} only contains one html file and nothing else.")
+            continue
+            
         # Check that there is only one file in the folder
         if len(os.listdir(folder_path)) != 1:
             print(f"Folder '{folder}' does not contain exactly one file.")
             continue
+            
 
         # Find the zip file in the folder
         zip_files = [f for f in os.listdir(folder_path) if f.endswith('.zip')]
@@ -95,8 +101,8 @@ def extract_files_and_process_zips(base_data_path, source_subfolder, destination
 base_data_path = 'data'
 
 # Define the source and destination subfolders
-source_subfolder = 'Original'
-destination_subfolder = 'Extracted'
+source_subfolder = '1_Original'
+destination_subfolder = '2_Extracted'
 
 # Usage
 extract_files_and_process_zips(base_data_path, source_subfolder, destination_subfolder)

@@ -7,7 +7,7 @@ base_data_path = 'data'
 
 # Paths for the zip file and the directory to extract to, relative to the base data path
 zip_file_path = os.path.join(base_data_path, 'Uebung 10.zip')
-extract_to_path = os.path.join(base_data_path, 'Original')
+extract_to_path = os.path.join(base_data_path, '1_Original')
 uebung_folder_path = os.path.join(extract_to_path, 'Uebung 10')
 abgaben_folder_path = os.path.join(uebung_folder_path, 'Abgaben')
 
