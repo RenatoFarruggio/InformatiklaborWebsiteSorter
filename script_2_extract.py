@@ -31,11 +31,12 @@ def extract_files_to_folder(base_data_path, source_subfolder, destination_subfol
     # Create the destination folder
     os.makedirs(destination_path, exist_ok=True)
 
-    # Move all files from source to destination
+    # Copy all files from source to destination
     for file_name in os.listdir(source_path):
         source_file = os.path.join(source_path, file_name)
         destination_file = os.path.join(destination_path, file_name)
-        shutil.move(source_file, destination_file)
+        shutil.copytree(source_file, destination_file)
+        
 
     print("Files moved to destination folder successfully.")
 
