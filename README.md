@@ -49,7 +49,7 @@ Analyzes HTML files in each subfolder for specific requirements such as headings
 
 ## Installation
 
-To run these scripts, you need to have Python installed on your system along with several dependencies. To install these dependencies, navigate to the repository's root directory and run:
+To run these scripts, you need to have Python installed on your system along with several dependencies. We used Python 3.11, but other versions probably work aswell. To install these dependencies, navigate to the repository's root directory and run:
 
 ```bash
 pip install -r requirements.txt
