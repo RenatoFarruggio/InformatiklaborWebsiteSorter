@@ -40,6 +40,13 @@ Automates the taking of screenshots for each submission using Selenium, saving t
 
 Generates an HTML page to showcase the submissions, each with a screenshot and link to the submission.
 
+### Script 6: `script_6_submissions_checker.py`
+**Assumptions:**
+- The `2_Extracted` folder exists and contains multiple subfolders, each with an HTML file.
+- Python environment is set up with BeautifulSoup library installed for HTML parsing.
+
+Analyzes HTML files in each subfolder for specific requirements such as headings, images, text blocks, lists, hyperlinks, tables, and CSS usage. Reports the findings for each submission.
+
 ## Installation
 
 To run these scripts, you need to have Python installed on your system along with several dependencies. To install these dependencies, navigate to the repository's root directory and run:
@@ -51,3 +58,7 @@ pip install -r requirements.txt
 ## Usage
 
 Each script can be run individually as per the requirements of the exercise processing stage. Ensure that the `data` directory is structured as expected by each script.
+
+## License
+
+[GNU General Public License v3.0](LICENSE)
